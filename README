@@ -1,0 +1,21 @@
+<!-- Tarea: Creación de un Blog Personal en PHP
+Objetivo:
+Desarrollar una aplicación web de blog personal utilizando PHP y MySQL (u otro sistema de gestión de bases de datos si prefieres) donde los usuarios puedan escribir, editar, eliminar y leer entradas.
+
+Requisitos Básicos:
+Interfaz de Usuario:
+
+La página principal del blog deberá mostrar las entradas en orden cronológico, con las más recientes primero.
+Cada entrada debe mostrar el título, la fecha de publicación y el contenido de la entrada.
+Se debe disponer de un enlace o botón para leer la entrada completa si esta es demasiado larga para la vista previa.
+Opcionalmente, mostrar el nombre del autor.
+Funcionalidad de Publicación:
+
+Los usuarios deben poder crear una nueva entrada proporcionando un título y el contenido.
+La fecha de publicación debe generarse automáticamente cuando se crea una nueva entrada.
+Los usuarios deben poder editar y eliminar sus propias entradas.
+Autenticación:
+
+Implementar un sistema de registro e inicio de sesión para los autores del blog.
+Solo los usuarios registrados pueden crear, editar o eliminar entradas.
+Opcionalmente, implementar un perfil de usuario donde puedan cambiar su nombre, correo electrónico o contraseña. -->
