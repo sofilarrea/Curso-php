@@ -5,10 +5,10 @@
       $title = $_POST['title'];
       $content = $_POST['content'];
       $author = $_POST['author'];
-      $query = "INSERT INTO blogs(title, description,author) VALUES ('$title', '$description', '$author')";
-    // $result = mysqli_query($conn, $query);
-    // if(!$result){
-    //   die("Query Failed");
+      $query = "INSERT INTO blogs(title, description,author) VALUES ('$title', '$description', '$author')"; // Insert data in db blogs
+      $result = mysqli_query($conn, $query);
+      if(!$result){
+        die("Query Failed");
     // }
 
     // $_SESSION['message'] = 'Blog Saved Successfully';
