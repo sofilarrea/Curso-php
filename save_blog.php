@@ -6,17 +6,14 @@
       $content = $_POST['content'];
       $author = $_POST['author'];
       $query = "INSERT INTO blogs(title, description,author) VALUES ('$title', '$description', '$author')"; // Insert data in db blogs
-      $result = mysqli_query($conn, $query);
+      $result = mysqli_query($conn, $query); // Execute query
       if(!$result){
-        die("Query Failed");
-    // }
+        die("Query Failed"); // If query failed, show this message
+      }
 
-    // $_SESSION['message'] = 'Blog Saved Successfully';
-    // $_SESSION['message_type'] = 'success';
-    // header("Location: index.php");
+      $_SESSION['message'] = 'Blog Saved Successfully'; // If query success, show this message
+      $_SESSION['message_type'] = 'success'; // If query success, show this message
+      header("Location: index.php"); // Redirect to index.php!!
   }
 
-
-
-  echo $title = $_POST['title'];
 ?>
