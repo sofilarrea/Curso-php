@@ -17,34 +17,34 @@
     </head>
   <body>
   <?php include('db.php') ?> <!-- Conection db -->
-
-<h3>ess joda</h3>
-<div class="container">
-    <div class="row d-flex justify-content-center ">
-      <div class="col-sm-6">
-        <div class="card shadow-lg" style="border-radius: 0;" data-aos="flip-left">
-          <?php if(isset($_SESSION['message'])){ ?> <!-- If session message exist, show this message -->
-            <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading"><?php echo $_SESSION['message']; ?></h4>
-            <?php session_unset(); } ?> <!-- Close session -->
-        </div>
-          <div class="card-body p-5 text-center">
-            <!-- Send data to save_blog.php -->
-            <form action="save_blog.php" method="POST">
-              <div class="form-group">
-                <input type="text" name="Title" class="form-control" placeholder="Blog Title" autofocus>
-              </div>
-              <div class="form-group">
-                <textarea name="content" rows="2" class="form-control" placeholder="Blog Content"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="text" name="author" class="form-control" placeholder="Blog Author">
-              </div>
-              <input type="submit" name="save-blog" class="btn btn-success btn-block" value="Save Blog">
-            </form>
+  <?php 'Hola' ?>
+  <h3>ess joda</h3>
+  <div class="container">
+      <div class="row d-flex justify-content-center ">
+        <div class="col-sm-6">
+          <div class="card shadow-lg" style="border-radius: 0;" data-aos="flip-left">
+            <?php if(isset($_SESSION['message'])){ ?> <!-- If session message exist, show this message -->
+              <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading"><?php echo $_SESSION['message']; ?></h4>
+              <?php session_unset(); } ?> <!-- Close session -->
+          </div>
+            <div class="card-body p-5 text-center">
+              <!-- Send data to save_blog.php -->
+              <form action="save_blog.php" method="POST">
+                <div class="form-group">
+                  <input type="text" name="Title" class="form-control" placeholder="Blog Title" autofocus>
+                </div>
+                <div class="form-group">
+                  <textarea name="content" rows="2" class="form-control" placeholder="Blog Content"></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="author" class="form-control" placeholder="Blog Author">
+                </div>
+                <input type="submit" name="save-blog" class="btn btn-success btn-block" value="Save Blog">
+              </form>
+            </div>
           </div>
         </div>
-      </div>
 
       <!-- Show data from db  in a table -->
       <div class="col-sm-6">
@@ -73,13 +73,16 @@
             <?php }
 
             ?>
+            <!-- Show data from db in a table -->
             <tr>
               <th scope="row"><?php echo $row['id']; ?> </th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td><?php echo $row['date']; ?></td>
+              <td><?php echo $row['title']; ?></td>
+              <td><?php echo $row['content']; ?></td>
+              <td><?php echo $row['author']; ?></td>
+              <td><a href="edit.php? id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a></td>
+              <td><a href="" class="btn btn-danger">Delete</a></td>
             </tr>
-
           </tbody>
         </table>
       </div>
