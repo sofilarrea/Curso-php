@@ -17,7 +17,7 @@ if(mysqli_num_rows($result) == 1){ //If the query return 1 row, show this data /
 ?>
 <div class="card-body p-5 text-center">
   <!-- Send data to save_blog.php -->
-  <form action="edit_blog.php" method="POST">
+  <form action="edit_blog.php? id=<?php echo $id ?> " method="POST">
     <div class="form-group">
       <input type="text" name="Title"  value="<?php echo $title ?>" class="form-control" placeholder="Blog Title" autofocus>
     </div>
@@ -27,6 +27,6 @@ if(mysqli_num_rows($result) == 1){ //If the query return 1 row, show this data /
     <div class="form-group">
       <input type="text" name="author" class="form-control" value="<?php echo $author ?>"  placeholder="Blog Author">
     </div>
-    <input type="submit" name="save-blog" class="btn btn-success btn-block" value="Save Blog">
+    <input type="submit" name="edit-blog" class="btn btn-success btn-block" value="Edit Blog">
   </form>
 </div>

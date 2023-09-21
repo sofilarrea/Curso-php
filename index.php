@@ -66,7 +66,7 @@
               <td><?php echo $row['content']; ?></td>
               <td><?php echo $row['author']; ?></td>
               <td><a href="edit.php? id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a></td>
-              <td><a href="" class="btn btn-danger">Delete</a></td>
+              <td><a href="delete.php" class="btn btn-danger">Delete</a></td>
             </tr>
           </tbody>
         </table>
