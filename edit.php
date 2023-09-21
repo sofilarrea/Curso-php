@@ -7,7 +7,9 @@ $query = "SELECT * FROM blogs WHERE id = $id"; // Select the data from the table
 $result = mysqli_query($conn, $query); // Execute query //
 
 if(mysqli_num_rows($result) == 1){ //If the query return 1 row, show this data //
-  $row = mysqli_fetch_array($result);
+  $row = mysqli_fetch_array($result); // Fetch the data //
+
+  // Save the data in variables //
   $title = $row['title'];
   $content = $row['content'];
   $author = $row['author'];
@@ -15,7 +17,7 @@ if(mysqli_num_rows($result) == 1){ //If the query return 1 row, show this data /
 ?>
 <div class="card-body p-5 text-center">
   <!-- Send data to save_blog.php -->
-  <form action="save_blog.php" method="POST">
+  <form action="edit_blog.php" method="POST">
     <div class="form-group">
       <input type="text" name="Title"  value="<?php echo $title ?>" class="form-control" placeholder="Blog Title" autofocus>
     </div>
